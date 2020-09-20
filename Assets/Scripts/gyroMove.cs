@@ -17,10 +17,12 @@ public class gyroMove : MonoBehaviour
                 
                 Debug.Log(transform.position);
                 Vector2 touchDelta = Input.GetTouch(0).deltaPosition;
-                transform.Translate(-touchDelta.x,-touchDelta.y,0);
+                transform.Translate(-touchDelta.x,0,-touchDelta.y);
+                
             }
         }else{
             Debug.Log("No hay touch");
+            
         }
             
     }
